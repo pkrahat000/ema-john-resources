@@ -9,6 +9,10 @@ const Shop = () => {
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
+
+    function AddToCardHandler(products){
+        console.log(products)
+    }
     return (
         <>
                 <h2>Available Products : {products.length}</h2>
@@ -16,7 +20,11 @@ const Shop = () => {
             <div className='products-container'>
                 {
                     products.map(product => 
-                    <Product products={product}></Product>)
+                    <Product 
+                    key={product.id}
+                    products={product}
+                    AddToCardHandler={AddToCardHandler}
+                    ></Product>)
                 }
             </div>
             <div className='card-container'>

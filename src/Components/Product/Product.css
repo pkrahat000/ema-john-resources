@@ -1,12 +1,16 @@
 .product-contant{
     border: 1px solid #95A0A7;
     border-radius: 8px;
-    padding: 7px;
+    position: relative;
+}
+.product-info{
+    padding: 7px 7px 0px 7px;
 }
 .product-img{
     height: 286px;
     width: 286px;
     border-radius: 8px;
+    padding: 7px 7px 0px 7px;
 }
 .product-name{
     font-family: 'Lato';
@@ -15,6 +19,7 @@
     font-size: 21px;
     line-height: 25px;
     letter-spacing: 0.0015em;
+    margin-top: -5px;
     
 }
 .product-price{
@@ -34,4 +39,18 @@
     font-size: 16px;
     line-height: 14px;
     letter-spacing: 0.004em;
+}
+.product-btn{
+    background-color:#FFE0B3 ;
+    border: 1px solid #95A0A7;
+    border-radius: 0px 0px 8px 8px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.product-btn:hover{
+    background-color: orange;
+}
+.product-ratings{
+    margin-bottom: 50px;
 }
