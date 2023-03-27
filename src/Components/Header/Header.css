@@ -1,0 +1,14 @@
+.header{
+    background-color: #1C2B35;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 67px 20px 100px;
+}
+
+nav.header a {
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 30px;
+  }
