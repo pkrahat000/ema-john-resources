@@ -5,7 +5,7 @@ import './Product.css'
 
 const Product = (props) => {
     const {img,name,price,seller,ratings} = props.products
-    console.log(props)
+    // console.log(props)
     const AddToCardHandler = props.AddToCardHandler
     // console.log(AddToCardHandler)
 
