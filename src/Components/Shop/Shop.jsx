@@ -14,8 +14,9 @@ const Shop = () => {
         .then(data => setProducts(data))
     },[])
 
+    //* show data from local strg by id
     useEffect(()=>{
-        // console.log(products)                    //^ products are data pore load hoy tai dependancy te products call kore deya hoy jano products load hote pare. dependancy data jotobar load hobe totobar call korbe
+        // console.log(products)                    //? products are data pore load hoy tai dependancy te products call kore deya hoy jano products load hote pare. dependancy data jotobar change hobe totobar call korbe.
         const storedCard = getShoppingCart()
         const savedCard = [];
         // console.log(storedCard)
@@ -37,7 +38,7 @@ const Shop = () => {
     },[products])
     /* Card first time array cilo. local storage a object hisebe set korche. object are moddhe id and quantity ase. */
 
-    /* first time local storage are data are id and quantity theke for in loop chaliye id gulake pabo. id diye product find korbo. product are moddher quantity ke local storage are quantity diye set korbo. product gulake akta array are moddhe rakhbo. and ai array kei setCard are moddhe rakhbo.  */
+    /* first time local storage are data are id and quantity ke for in loop chaliye id gulake pabo. id diye product find korbo. product are moddhe quantity ke local storage are quantity diye set korbo. product gulake akta array are moddhe rakhbo. and ai array kei setCard are moddhe rakhbo. */
 
     function AddToCardHandler(products){
         const newCard = [...card, products]

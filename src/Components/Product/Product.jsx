@@ -6,7 +6,7 @@ import { addToDb } from '../../../utilities/fakedb';
 
 const Product = (props) => {
     const {img,name,price,seller,ratings} = props.products
-    // console.log(props)
+    
     const AddToCardHandler = props.AddToCardHandler
     // console.log(AddToCardHandler)
 

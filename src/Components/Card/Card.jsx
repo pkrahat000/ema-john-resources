@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
 import './Card.css'
 const Card = ({card}) => {                //? option - 3 Destructuring
     // const cards = props.card           //? option - 1
     // const {card} = props               //? option - 2 Destructuring
+    // console.log(card)                  //? all local strg data show inside arry like object
     //* Total Price & Shipping data show
     let total = 0
     let totalShipping = 0
@@ -10,6 +10,7 @@ const Card = ({card}) => {                //? option - 3 Destructuring
          total = total + product.price
          totalShipping = totalShipping + product.shipping  
         }
+    //* tax & grandTotal data show
     const tax = total*7/100
     const grandTotal = total + totalShipping + tax
 
