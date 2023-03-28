@@ -16,29 +16,32 @@ const Shop = () => {
 
     //* show data from local strg by id
     useEffect(()=>{
-        // console.log(products)                    //? products are data pore load hoy tai dependancy te products call kore deya hoy jano products load hote pare. dependancy data jotobar change hobe totobar call korbe.
+        // console.log(products)
+        //? useEffect je jar moto data load kore because useEffect synchronous process mane na. first a products default value empty array [ ]. fetch data anar age second useEffect kaj ses kore dei tai products are data pore load hoy tai products data pay na. dependency call korle products jotobar change hobe totobar useEffect kaj kore.
+
+        /* first time local storage are data are id and quantity ke for in loop chaliye id gulake pabo. id diye product find korbo. product are moddhe quantity ke local storage are quantity diye set korbo. product gulake akta array are moddhe rakhbo. and ai array kei setCard are moddhe rakhbo. */
+
         const storedCard = getShoppingCart()
         const savedCard = [];
-        // console.log(storedCard)
+        // 1. get id from getShoppingCart()
         for(const id in storedCard){
-            // console.log(id)
-
+            // 2. get product from products by using id
             const saveProduct = products.find(product => product.id === id )
-            // console.log(saveProduct)
-
-            
-            if(saveProduct){
+            if(saveProduct){                     //? if na dile error ase for first time [ ]
+                // 3. add quantity
                 const quantity = storedCard[id]
-                saveProduct.quantity = quantity
-                savedCard.push(saveProduct)
+                saveProduct.quantity = quantity;
+                // 4. added product to the set savedCard
+                savedCard.push(saveProduct)        //? array amader banano tai push hoy.
                 // console.log(saveProduct)
             }
         }
+        // 5. set card
         setCard(savedCard)
     },[products])
+
     /* Card first time array cilo. local storage a object hisebe set korche. object are moddhe id and quantity ase. */
 
-    /* first time local storage are data are id and quantity ke for in loop chaliye id gulake pabo. id diye product find korbo. product are moddhe quantity ke local storage are quantity diye set korbo. product gulake akta array are moddhe rakhbo. and ai array kei setCard are moddhe rakhbo. */
 
     function AddToCardHandler(products){
         const newCard = [...card, products]
