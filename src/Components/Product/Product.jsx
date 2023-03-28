@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import './Product.css'
+import { addToDb } from '../../../utilities/fakedb';
 
 const Product = (props) => {
     const {img,name,price,seller,ratings} = props.products
