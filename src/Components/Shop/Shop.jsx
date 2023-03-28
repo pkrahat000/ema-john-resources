@@ -60,7 +60,9 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
-            <Card card={card}></Card>
+            <div>
+                    <Card card={card}></Card>
+            </div>
           </div>
         </>
     );
